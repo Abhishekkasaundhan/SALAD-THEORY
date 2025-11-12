@@ -56,7 +56,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   let message = document.getElementById("message").value;
   let price = document.getElementById("totalPrice").innerText;
 
-  let phoneNumber = "918318353125"; 
+  let phoneNumber = "917838988993"; 
   let whatsappURL = `https://wa.me/${phoneNumber}?text=Hello, my name is ${name}. I want to order ${selectedSalads}. Address: ${address}. Message: ${message}. ${price}`;
 
 
