@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salad Theory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar + Hero -->
+  <header>
+    <nav>
+      <h1 style="font-family: cursive;">Salad Theory</h1>
+
+      <ul>
+        <li><a href="#about" style="font-family: cursive;">About</a></li>
+        <li><a href="#menu" style="font-family: cursive;">Menu</a></li>
+        <li><a href="#contact" style="font-family: cursive;">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2 style="font-family: cursive;">Fresh. Healthy. Delicious.</h2>
+      <p style="font-family: cursive;">Eat well, live well with our farm-fresh salads</p>
+      <button onclick="scrollToMenu()" style="font-family: cursive;">Explore Menu</button>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2 style="font-family: cursive;">About Us</h2>
+    <p style="font-family: cursive;">
+      At Salad Theory, we create salads that bring flavor, freshness, and health together. 
+      Our ingredients are farm-sourced and blended into creative recipes that make healthy eating exciting.
+    </p>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <h2 style="font-family: cursive;">Our Salads</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Greek Salad">
+        <h3>Greek Salad</h3>
+        <p>Olives, cucumbers, tomatoes, and feta cheese.</p>
+        <span class="price">₹200</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Caesar Salad">
+        <h3>Caesar Salad</h3>
+        <p>Romaine lettuce, parmesan, and croutons.</p>
+        <span class="price">₹250</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"  alt="Fruit Salad">
+        <h3>Fruit Salad</h3>
+        <p>Seasonal fruits with honey drizzle.</p>
+        <span class="price">₹220</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Avocado Salad">
+        <h3>Avocado Salad</h3>
+        <p>Avocado, cherry tomatoes, leafy greens.</p>
+        <span class="price">₹300</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"  alt="Quinoa Salad">
+        <h3>Quinoa Salad</h3>
+        <p>Protein-packed quinoa with veggies.</p>
+        <span class="price">₹280</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"alt="Pasta Salad">
+        <h3>Pasta Salad</h3>
+        <p>Colorful pasta, veggies, and Italian dressing.</p>
+        <span class="price">₹240</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Caprese Salad">
+        <h3>Caprese Salad</h3>
+        <p>Fresh mozzarella, basil, and tomatoes.</p>
+        <span class="price">₹270</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Kale Salad">
+        <h3>Kale Salad</h3>
+        <p>Kale, nuts, cranberries, and honey dressing.</p>
+        <span class="price">₹250</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Bean Salad">
+        <h3>Bean Salad</h3>
+        <p>Kidney beans, chickpeas, and herbs.</p>
+        <span class="price">₹230</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Spinach Salad">
+        <h3>Spinach Salad</h3>
+        <p>Spinach, mushrooms, and boiled eggs.</p>
+        <span class="price">₹260</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <div class="dropdown">
+        <div class="dropdown-btn" onclick="toggleDropdown()">Select Salads ▼</div>
+        <div class="dropdown-content" id="saladDropdown">
+          <label><span>Greek Salad  ₹200</span><input type="checkbox" value="Greek Salad - ₹200"></label>
+          <label><span>Caesar Salad  ₹250</span><input type="checkbox" value="Caesar Salad - ₹250"></label>
+          <label><span>Fruit Salad  ₹220</span><input type="checkbox" value="Fruit Salad - ₹220"></label>
+          <label><span>Avocado Salad  ₹300</span><input type="checkbox" value="Avocado Salad - ₹300"></label>
+          <label><span>Quinoa Salad  ₹280</span><input type="checkbox" value="Quinoa Salad - ₹280"></label>
+          <label><span>Pasta Salad  ₹240</span><input type="checkbox" value="Pasta Salad - ₹240"></label>
+          <label><span>Caprese Salad  ₹270</span><input type="checkbox" value="Caprese Salad - ₹270"></label>
+          <label><span>Kale Salad  ₹250</span><input type="checkbox" value="Kale Salad - ₹250"></label>
+          <label><span>Bean Salad  ₹230</span><input type="checkbox" value="Bean Salad - ₹230"></label>
+          <label><span>Spinach Salad  ₹260</span><input type="checkbox" value="Spinach Salad - ₹260"></label>
+        </div>
+      </div>
+      <input type="text" id="address" placeholder="Your Address" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <p id="totalPrice">Total: ₹0</p>
+      <div id="selectedSalads">
+        <h3>Your Selected Salads:</h3>
+        <ul id="saladList"></ul>
+      </div>
+      <button type="submit">Send Order</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Salad Theory. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

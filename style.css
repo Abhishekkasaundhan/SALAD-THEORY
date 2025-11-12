@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+nav h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff914d;
+}
+
+/* Hero */
+header {
+  background: linear-gradient(to right, #2e7d32c7, #81c784c7),
+    url("https://images.unsplash.com/photo-1604909053195-45e46557d7d3?auto=format&fit=crop&w=1400&q=80")
+    center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero {
+  margin-top: 80px;
+}
+
+header h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+header button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff914d;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: #ff5c00;
+}
+
+/* Sections */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.card p {
+  margin: 0 15px 10px;
+  color: #666;
+}
+
+.price {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea, form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form select[multiple] {
+  height: 180px;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  background: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #1b5e20;
+}
+
+#totalPrice {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #d32f2f;
+}
+
+/* Footer */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
+
+
+
+.dropdown {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .dropdown-btn {
+      padding: 10px;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .dropdown-content.show {
+      display: block;
+    }
+    .dropdown-content label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .dropdown-content label.selected {
+      background-color: #d4f7d4;
+      font-weight: bold;
+    }
+    #selectedSalads {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+    }
+    #selectedSalads h3 {
+      margin-bottom: 5px;
+    }
+    #selectedSalads ul {
+      margin: 0;
+      padding-left: 20px;
+    }
